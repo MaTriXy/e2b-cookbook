@@ -12,9 +12,13 @@ This example shows how to run [Sandbox Agent](https://github.com/rivet-dev/sandb
 
 ## Why use Sandbox Agent SDK?
 
-- Session lifecycle helpers (`createSession`, `resumeSession`, `destroySession`)
-- Prompt/send helpers (`session.prompt`, `session.send`)
-- Event streaming (`session.onEvent`) without writing transport plumbing
+Most coding-agent integrations are provider-specific. If you swap agents, you usually also swap SDKs, event formats, and session plumbing.
+
+Sandbox Agent SDK solves that by giving your app one stable API for different coding agents:
+
+- Agent portability: same app code, different agent selected via `SANDBOX_AGENT`
+- Stable session model: create/resume/destroy sessions the same way across agents
+- Unified interaction model: prompt/send/events without implementing raw transport details
 
 ## Setup
 
