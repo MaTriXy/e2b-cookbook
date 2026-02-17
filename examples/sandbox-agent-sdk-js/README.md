@@ -22,6 +22,34 @@ Sandbox Agent solves three problems:
 - **Every coding agent is different:** Claude Code, Codex, OpenCode, Cursor, Amp, and Pi each have proprietary APIs and event formats. Sandbox Agent provides one API, so swapping agents is a config change (`SANDBOX_AGENT`) instead of a rewrite.
 - **Sessions are ephemeral:** Agent transcripts often die with the sandbox/process. Sandbox Agent emits a universal event schema so you can store, replay, and audit sessions outside the sandbox lifecycle.
 
+## Features
+
+- **Universal Agent API**
+
+Claude Code, Codex, OpenCode, and Amp each have different APIs. We provide a single, unified interface to control them all.
+
+- **Streaming Events**
+
+Real-time SSE stream of everything the agent does. Persist to your storage, replay sessions, audit everything.
+
+- **Universal Schema**
+
+Standardized session schema that covers all features of all agents. Includes tool calls, permission requests, file edits, etc.
+
+- **Runs Inside Any Sandbox**
+
+Run Sandbox Agent inside E2B, Daytona, Vercel Sandboxes, or Docker.
+
+- **Full Session Lifecycle Management**
+
+Create sessions, send messages, persist transcripts. Full session lifecycle management over HTTP.
+
+- **OpenCode Support**
+
+Experimental.
+
+Connect OpenCode CLI, SDK, or web UI to control agents through familiar OpenCode tooling.
+
 ## Setup
 
 1. Install dependencies:
