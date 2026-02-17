@@ -26,7 +26,7 @@ Sandbox Agent solves three problems:
 
 - **Universal Agent API**
 
-Claude Code, Codex, OpenCode, and Amp each have different APIs. We provide a single, unified interface to control them all.
+Claude Code, Codex, OpenCode, and Amp each have different APIs. Sandbox Agent exposes one HTTP API that works across all of them.
 
 - **Streaming Events**
 
@@ -68,7 +68,7 @@ OPENAI_API_KEY=your_openai_api_key
 # CODEX_API_KEY=your_codex_api_key
 # ANTHROPIC_API_KEY=your_anthropic_api_key
 
-# Optional: select a specific agent id
+# Optional: select which agent to run
 # AGENT=codex
 ```
 
@@ -88,6 +88,6 @@ KEEP_ALIVE=1 npm run start
 
 ## Notes
 
-- If `AGENT` is set, that exact agent ID is used.
+- If `AGENT` is set, that agent is used.
 - If `AGENT` is not set, the script defaults to `codex` when OpenAI/Codex keys exist, otherwise `claude` when Anthropic key exists.
 - API keys are available to processes running inside the sandbox.
