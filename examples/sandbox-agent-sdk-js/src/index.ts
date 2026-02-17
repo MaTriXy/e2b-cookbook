@@ -98,6 +98,14 @@ try {
 
   // Optional: uncomment to run a prompt through the agent.
   // await session.prompt([{ type: 'text', text: 'Reply with exactly: sandbox-agent-ready' }])
+
+  if (process.env.KEEP_ALIVE === '1') {
+    console.log('KEEP_ALIVE=1 set. Press Ctrl+C to stop and delete the sandbox.')
+    // Keep process alive until interrupted so you can open the Inspector URL.
+    while (true) {
+      await sleep(60_000)
+    }
+  }
 } finally {
   if (client) {
     try {

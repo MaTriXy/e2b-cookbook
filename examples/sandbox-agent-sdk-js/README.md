@@ -52,6 +52,12 @@ npm run start
 
 The script prints an Inspector URL once the server and session are ready, then exits after cleanup.
 
+To keep the sandbox running so you can open the Inspector URL, run:
+
+```bash
+KEEP_ALIVE=1 npm run start
+```
+
 ## Notes
 
 - If `SANDBOX_AGENT` is set, that exact agent ID is used.
