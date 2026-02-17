@@ -12,13 +12,15 @@ This example shows how to run [Sandbox Agent](https://github.com/rivet-dev/sandb
 
 ## Why use Sandbox Agent SDK?
 
-Most coding-agent integrations are provider-specific. If you swap agents, you usually also swap SDKs, event formats, and session plumbing.
+Running coding agents remotely is hard. Existing SDKs assume local execution, SSH breaks streaming and interactive workflows, and every coding agent has a different API.
 
-Sandbox Agent SDK solves that by giving your app one stable API for different coding agents:
+Building this from scratch usually means rewriting everything for each coding agent.
 
-- Agent portability: same app code, different agent selected via `SANDBOX_AGENT`
-- Stable session model: create/resume/destroy sessions the same way across agents
-- Unified interaction model: prompt/send/events without implementing raw transport details
+Sandbox Agent solves three problems:
+
+- **Coding agents need sandboxes:** You can't let AI execute arbitrary code on your production servers. Sandbox Agent runs inside the E2B sandbox and exposes HTTP/SSE.
+- **Every coding agent is different:** Claude Code, Codex, OpenCode, Cursor, Amp, and Pi each have proprietary APIs and event formats. Sandbox Agent provides one API, so swapping agents is a config change (`SANDBOX_AGENT`) instead of a rewrite.
+- **Sessions are ephemeral:** Agent transcripts often die with the sandbox/process. Sandbox Agent emits a universal event schema so you can store, replay, and audit sessions outside the sandbox lifecycle.
 
 ## Setup
 
