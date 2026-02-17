@@ -10,13 +10,13 @@ function sleep(ms: number): Promise<void> {
 }
 
 function detectAgent(envs: Record<string, string>): string {
-  const explicitAgent = process.env.SANDBOX_AGENT?.trim()
+  const explicitAgent = process.env.AGENT?.trim()
   if (explicitAgent) return explicitAgent
 
   if (envs.OPENAI_API_KEY || envs.CODEX_API_KEY) return 'codex'
   if (envs.ANTHROPIC_API_KEY) return 'claude'
 
-  throw new Error('Set SANDBOX_AGENT or provide OPENAI_API_KEY/CODEX_API_KEY/ANTHROPIC_API_KEY')
+  throw new Error('Set AGENT or provide OPENAI_API_KEY/CODEX_API_KEY/ANTHROPIC_API_KEY')
 }
 
 function inspectorUrl(baseUrl: string, token: string, sessionId: string): string {

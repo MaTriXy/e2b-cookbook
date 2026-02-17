@@ -6,7 +6,7 @@ This example shows how to run [Sandbox Agent](https://github.com/rivet-dev/sandb
 
 1. Creates an E2B sandbox.
 2. Installs Sandbox Agent CLI in the sandbox.
-3. Installs a coding agent (`codex`, `claude`, or any `SANDBOX_AGENT` value).
+3. Installs a coding agent (for example `codex` or `claude`).
 4. Starts `sandbox-agent server` in the sandbox.
 5. Connects with `SandboxAgent.connect(...)` and creates a session.
 
@@ -19,7 +19,7 @@ Building this from scratch usually means rewriting everything for each coding ag
 Sandbox Agent solves three problems:
 
 - **Coding agents need sandboxes:** You can't let AI execute arbitrary code on your production servers. Sandbox Agent runs inside the E2B sandbox and exposes HTTP/SSE.
-- **Every coding agent is different:** Claude Code, Codex, OpenCode, Cursor, Amp, and Pi each have proprietary APIs and event formats. Sandbox Agent provides one API, so swapping agents is a config change (`SANDBOX_AGENT`) instead of a rewrite.
+- **Every coding agent is different:** Claude Code, Codex, OpenCode, Cursor, Amp, and Pi each have proprietary APIs and event formats. Sandbox Agent provides one API, so swapping agents is a config change instead of a rewrite.
 - **Sessions are ephemeral:** Agent transcripts often die with the sandbox/process. Sandbox Agent emits a universal event schema so you can store, replay, and audit sessions outside the sandbox lifecycle.
 
 ## Features
@@ -63,13 +63,13 @@ npm install
 ```bash
 E2B_API_KEY=your_e2b_api_key
 
-# Provide at least one provider key, unless SANDBOX_AGENT points to a compatible preinstalled agent
+# Provide at least one provider key
 OPENAI_API_KEY=your_openai_api_key
 # CODEX_API_KEY=your_codex_api_key
 # ANTHROPIC_API_KEY=your_anthropic_api_key
 
-# Optional: any specific agent id
-# SANDBOX_AGENT=codex
+# Optional: select a specific agent id
+# AGENT=codex
 ```
 
 3. Run the example:
@@ -88,6 +88,6 @@ KEEP_ALIVE=1 npm run start
 
 ## Notes
 
-- If `SANDBOX_AGENT` is set, that exact agent ID is used.
-- If `SANDBOX_AGENT` is not set, the script defaults to `codex` when OpenAI/Codex keys exist, otherwise `claude` when Anthropic key exists.
+- If `AGENT` is set, that exact agent ID is used.
+- If `AGENT` is not set, the script defaults to `codex` when OpenAI/Codex keys exist, otherwise `claude` when Anthropic key exists.
 - API keys are available to processes running inside the sandbox.
