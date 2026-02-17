@@ -68,6 +68,8 @@ OPENAI_API_KEY=your_openai_api_key
 # CODEX_API_KEY=your_codex_api_key
 # ANTHROPIC_API_KEY=your_anthropic_api_key
 
+# Other agents may require additional credentials. Set any extra provider keys as environment variables.
+
 # Optional: select which agent to run
 # AGENT=codex
 ```
