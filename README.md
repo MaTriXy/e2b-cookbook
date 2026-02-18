@@ -158,7 +158,7 @@ Read more about E2B on the [E2B website](https://e2b.dev) and the official [E2B 
       <td><a href="https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/agentkit-coding-agent">TypeScript</a></td>
     </tr>
     <tr>
-    <td>Sandbox Agent SDK</td>
+    <td><a href="https://sandboxagent.dev/docs/sdk-overview">Sandbox Agent SDK</a></td>
       <td>Run Sandbox Agent inside E2B and connect with the SDK</td>
       <td>-</td>
       <td><a href="https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/sandbox-agent-sdk-js">TypeScript</a></td>

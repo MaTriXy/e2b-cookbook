@@ -1,6 +1,6 @@
 # Sandbox Agent SDK in E2B Sandbox (JavaScript)
 
-This example shows how to run [Sandbox Agent](https://github.com/rivet-dev/sandbox-agent) inside an E2B sandbox, then connect to it using the Sandbox Agent TypeScript SDK.
+This example shows how to run [Sandbox Agent](https://github.com/rivet-dev/sandbox-agent) inside an E2B sandbox, then connect to it using the [Sandbox Agent TypeScript SDK](https://sandboxagent.dev/docs/sdk-overview) (npm: [`sandbox-agent`](https://www.npmjs.com/package/sandbox-agent)).
 
 ## What this example does
 
@@ -89,3 +89,8 @@ KEEP_ALIVE=1 npm run start
 - If `AGENT` is set, that agent is used.
 - If `AGENT` is not set, the script defaults to `codex` when OpenAI/Codex keys exist, otherwise `claude` when Anthropic key exists.
 - API keys are available to processes running inside the sandbox.
+
+## References
+
+- [Sandbox Agent SDK docs](https://sandboxagent.dev/docs/sdk-overview)
+- [`sandbox-agent` npm package](https://www.npmjs.com/package/sandbox-agent)
