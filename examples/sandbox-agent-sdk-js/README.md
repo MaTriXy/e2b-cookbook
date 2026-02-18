@@ -20,7 +20,7 @@ Sandbox Agent solves three problems:
 
 - **Coding agents need sandboxes:** You can't let AI execute arbitrary code on your production servers. Sandbox Agent runs inside the E2B sandbox and exposes HTTP/SSE.
 - **Every coding agent is different:** Claude Code, Codex, OpenCode, Cursor, Amp, and Pi each have proprietary APIs and event formats. Sandbox Agent provides one API, so swapping agents is a config change instead of a rewrite.
-- **Sessions are ephemeral:** Agent transcripts often die with the sandbox/process. Sandbox Agent emits a universal event schema so you can store, replay, and audit sessions outside the sandbox lifecycle.
+- **Sessions are ephemeral:** Agent transcripts often die with the sandbox/process. Sandbox Agent emits a universal event schema so you can store, replay, and audit sessions outside the sandbox lifecycle. See [session persistence](https://sandboxagent.dev/docs/session-persistence).
 
 ## Features
 
