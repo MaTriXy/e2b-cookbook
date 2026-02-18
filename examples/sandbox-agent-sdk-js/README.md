@@ -24,27 +24,10 @@ Sandbox Agent solves three problems:
 
 ## Features
 
-- **Universal Agent API**
-
-Claude Code, Codex, OpenCode, and Amp each have different APIs. Sandbox Agent exposes one HTTP API that works across all of them.
-
-- **Streaming Events**
-
-Real-time SSE stream of everything the agent does. Persist to your storage, replay sessions, audit everything.
-
-- **Universal Schema**
-
-Standardized session schema that covers all features of all agents. Includes tool calls, permission requests, file edits, etc.
-
-- **Full Session Lifecycle Management**
-
-Create sessions, send messages, persist transcripts. Full session lifecycle management over HTTP.
-
-- **OpenCode Support**
-
-Experimental.
-
-Connect OpenCode CLI, SDK, or web UI to control agents through familiar OpenCode tooling.
+- **Universal Agent API** Claude Code, Codex, OpenCode, and Amp each have different APIs. Sandbox Agent exposes one HTTP API that works across all of them.
+- **Streaming Events** Real-time SSE stream of everything the agent does. Persist to your storage, replay sessions, audit everything.
+- **Universal Schema** Standardized session schema that covers all features of all agents. Includes tool calls, permission requests, file edits, etc.
+- **Full Session Lifecycle Management** Create sessions, send messages, persist transcripts. Full session lifecycle management over HTTP.
 
 ## Setup
 
