@@ -6,13 +6,11 @@ Run [Sandbox Agent](https://github.com/rivet-dev/sandbox-agent) inside E2B, then
 
 Running coding agents remotely is hard: local-first SDK assumptions, SSH streaming/TTY issues, and agent-specific APIs.
 
-Sandbox Agent SDK gives you one API for:
+Sandbox Agent gives you a simple way to launch coding agents inside sandboxes and manage them over HTTP directly from your backend.
 
-- Session lifecycle
-- Prompt/send calls
-- Streaming events
-
-Sessions are ephemeral by default. For replay/audit, see [session persistence](https://sandboxagent.dev/docs/session-persistence).
+- **Single API, Multiple Agents** — Drive Claude Code, Codex, OpenCode, Cursor, Amp, and Pi from one unified interface with complete feature support — no need to build separate integrations for each.
+- **Standardized Event Schema** — Every agent outputs events in its own format. The universal session schema brings them all into a single, normalized structure that's easy to persist and replay.
+- **Two Ways to Deploy** — Use it as a self-contained HTTP server, or drop in the TypeScript SDK to embed it right inside your application.
 
 ## Setup
 
@@ -45,6 +43,7 @@ This starts up your Sandbox Agent and connects it to your E2B Sandbox. To run on
 ## References
 
 - [Sandbox Agent SDK docs](https://sandboxagent.dev/docs/sdk-overview)
+- [Sandbox Agent sessions and events](https://sandboxagent.dev/docs/agent-sessions).
 - [Sandbox Agent session persistence](https://sandboxagent.dev/docs/session-persistence)
 - [Sandbox Agent credentials](https://sandboxagent.dev/docs/credentials)
 - [E2B Sandbox Agent SDK guide](https://e2b.dev/docs/agents/sandbox-agent-sdk)
