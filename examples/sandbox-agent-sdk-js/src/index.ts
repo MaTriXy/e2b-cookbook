@@ -18,20 +18,11 @@ async function main() {
 			create: { envs },
 		})
 	});
+	console.log(`Ready. Visit Sandbox Agent inspector URL: ${sdk.inspectorUrl}`);
 
 	try {
-		const session = await sdk.createSession({ agent: "claude" });
-		console.log(`Inspector URL: ${sdk.inspectorUrl}`);
-
-		const response = await session.prompt([
-			{ type: "text", text: "Summarize this repository" },
-		]);
-		console.log(response.stopReason);
-
-		console.log('Sandbox Agent is ready.');
-
-
 		// Uncomment to run one prompt and stream events in your terminal.
+		// const session = await sdk.createSession({ agent: "claude" });
 		// const off = session.onEvent((event) => {
 		// 	 console.log(`[event] from ${event.sender}`, event.payload);
 		// })
