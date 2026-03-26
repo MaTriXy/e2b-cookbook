@@ -21,7 +21,7 @@ async function main() {
 	console.log(`Ready. Visit Sandbox Agent inspector URL: ${sdk.inspectorUrl}`);
 
 	// Uncomment to run one prompt and stream events in your terminal.
-	// Read more about Sessions and Events here: https://sandboxagent.dev/docs/agent-sessions.
+	// Read more about Sessions and Events here: https://sandboxagent.dev/docs/agent-sessions
 	// const session = await sdk.createSession({ agent: "claude" });
 	// const off = session.onEvent((event) => {
 	// 	 console.log(`[event] from ${event.sender}`, event.payload);
