@@ -34,6 +34,12 @@ Read more about E2B on the [E2B website](https://e2b.dev) and the official [E2B 
   </thead>
   <tbody>
     <tr>
+      <td>Agents SDK</td>
+      <td>Agentic workflows running in E2B sandboxes</td>
+      <td><a href="https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/openai-agents-sdk">Python</a></td>
+      <td>-</td>
+    </tr>
+    <tr>
       <td rowspan="5">OpenAI</td>
       <td>o1, o3-mini</td>
       <td>Data analysis and visualization of a CSV</td>
@@ -57,12 +63,6 @@ Read more about E2B on the [E2B website](https://e2b.dev) and the official [E2B 
       <td>OpenAI Codex, running inside a Sandbox</td>
       <td><a href="https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/openai-codex-in-sandbox-python">Python</a></td>
       <td><a href="https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/openai-codex-in-sandbox-js">TypeScript</a></td>
-    </tr>
-    <tr>
-      <td>OpenAI Agents SDK</td>
-      <td>Agentic workflows running in E2B sandboxes</td>
-      <td><a href="https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/openai-agents-sdk">Python</a></td>
-      <td>-</td>
     </tr>
     <tr>
       <td rowspan="2">Anthropic</td>
